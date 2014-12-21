@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+{% block title %} - potwierdzenie{% endblock %}   
+{% block content %}
+<center>
+<h2>Potwierdzenie</h2>
+Wyglada na to ze wszytko jest okej.
+<p>
+</center>
+
+
+
+
+{% endblock %}
+
+
+{% block lista %}
+<div id="list">
+
+<ul>
+  {% for people in tup %}
+    <li class="people">{{ people }}</li>
+  {% endfor %}
+</ul>
+
+
+</div>
+{% endblock %}
+
+
+
+
+{% block footer %}
+<p>
+<div style="text-align:center;"><a href="/rej">Dodanie nowego</a></div>
+</p>
+{% endblock %}
+
+
+

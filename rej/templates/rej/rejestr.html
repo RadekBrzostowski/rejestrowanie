@@ -1,0 +1,61 @@
+{% extends "base.html"%}
+{% block title %} - dodanie{% endblock %}   
+{% block content %}
+<center>
+<h2>Zadanie dodania usera</h2>
+Wszystkie pola są wymagane<br>
+W przypadku pełnoletności mozna pominąć pole rodzic.
+<p>
+<div style="margin-left:15%;margin-right:15%;">
+<fieldset>
+  <legend> *- ___ -- ___ -* </legend>
+    <form method="post" action=".">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Dodawanie">   
+  </form>
+</fieldset>
+</div>
+</center>
+
+
+
+
+{% endblock %}
+
+
+{% block lista %}
+<br><br>
+<h2>LISTA</h2>
+
+<div id="list" >
+
+<ul>
+  {% for people in tup %}
+    <li class="people">{{ people }}</li>
+  {% endfor %}
+</ul>
+
+
+{{ mlody }}
+
+<br>
+<br>
+
+
+
+</div>
+{% endblock %}
+
+
+
+
+{% block footer %}
+<p>
+<br>
+<br><br>
+copyright Radoslaw 
+</p>
+{% endblock %}
+
+
+
